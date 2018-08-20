@@ -1,0 +1,5 @@
+.DS_Store
+.idea
+/public
+.vscode
+node_modules
