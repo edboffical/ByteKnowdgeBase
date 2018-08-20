@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 //create sidebar
 const fs = require('fs');
 const path = require('path');
