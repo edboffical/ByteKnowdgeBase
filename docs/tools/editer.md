@@ -1,4 +1,4 @@
-# 配置开发编辑器
+# 开发编辑器
 
 ## visual studio code
 
