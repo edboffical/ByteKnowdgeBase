@@ -42,7 +42,7 @@ const sidebarArray = ["/"].concat(dirs.map((dir) => {
 module.exports = {
     title: "8B知识库",
     //description : "use for meta description",
-    base: "/" + process.env.REPOSITORY + "/",
+    base: "/",
     config: (md) => {
         md.options.linkify = true
     },
