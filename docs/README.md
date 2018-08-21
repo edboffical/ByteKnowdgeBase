@@ -52,7 +52,7 @@ npm run docs:publish
 
 **知识库发布必须遵循如下顺序：**
 
-编写 Markdown 源文件 -> 本地预览 没问题再往下 -> 将文件 push 到 master 分支 -> 发布知识库
+编写 Markdown 源文件 -> 本地预览 没问题再往下 -> 发布知识库 -> 将文件 push 到 master 分支
 
 ## 文档编写规范
 

@@ -28,3 +28,29 @@
 * 《HTML 表单》，只需学习 [<HTML表单指南>](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Forms)、[<您的首个 HTML表单>](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Forms/Your_first_HTML_form)、[<如何构建 HTML 表单>](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)、[<原生表单部件>](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets)。
 
 将本次练习提交到自己的代码仓库的 `html-basic` 目录下，每个小练习，各自建立子目录，子目录名自定。
+
+## 3.CSS
+
+学习 MDN 的 [《CSS -- 设计 Web》](https://developer.mozilla.org/zh-CN/docs/Learn/CSS) 教程。要求：
+
+* 《CSS介绍》，[<选择器>](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors) 部分，只需学习 [<简单选择器>](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors)。<属性选择器>、<伪类和伪元素>、<组合器和多用选择器>，不作要求。 这一章节，其余部分都需要学习。完成练习 [《基本的CSS理解》](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension)。
+* 《样式化文字》，全部内容。完成练习 [《排版社区大学首页》](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/%E4%B8%BA%E6%96%87%E6%9C%AC%E6%B7%BB%E5%8A%A0%E6%A0%B7%E5%BC%8F/Typesetting_a_homepage)。
+* 《样式化区块》，全部内容。完成练习 [《创建精美的信纸》](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper)。
+* 《CSS 排版概述》，不做要求。
+
+以上练习提交到自己的代码仓库中 `css-basic` 目录下，每个小练习，各自建立子目录，子目录名自定。
+
+:::tip 综合练习
+实现登陆、注册页。具体页面草图如下：
+
+* <a href="../.resources/web-tour/images/1.png">登录页</a>
+* [注册页](/assets/img/html-css-register-login-page.png)
+
+要求：
+
+1. **纯手工打造**页面的HTML、CSS，不允许使用第三方类库。
+2. 页面的色调，不做要求，可自由发挥 。
+3. 头部导航条，宽度 100%，全屏撑满。
+
+将本次练习提交到自己的代码仓库 `html-css-exercise` 目录。
+:::
