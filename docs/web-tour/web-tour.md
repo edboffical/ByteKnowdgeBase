@@ -12,7 +12,7 @@
 
 :::tip 练习
 在自己的代码仓库中，建立 `test-site` 的目录，跟着教程，把教程中要求练习的代码，提交到此目录下。按教程要求，本教程学习完后的练习的样子应该是这样的： 
-![test](./images/1.png)
+![test](../.resources/web-tour/images/1.png)
 :::
 
 :::warning 注意
