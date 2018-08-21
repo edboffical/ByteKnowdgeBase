@@ -27,4 +27,4 @@
 * 《HTML 表格》，全部内容。完成练习 [《Assessment: Structuring planet data》](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Tables/Structuring_planet_data)。
 * 《HTML 表单》，只需学习 [<HTML表单指南>](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Forms)、[<您的首个 HTML表单>](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Forms/Your_first_HTML_form)、[<如何构建 HTML 表单>](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)、[<原生表单部件>](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets)。
 
-将本次练习提交到自己的代码仓库的 `html-basic` 目录下，每个小练习，各自建立子目录，子目录名自定。
+将本次练习提交到自己的代码仓库的 `html-basic` 目录下，每个小练习，各自建立子目录，子目录名自定。
