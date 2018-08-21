@@ -12,7 +12,7 @@
 
 :::tip 练习
 在自己的代码仓库中，建立 `test-site` 的目录，跟着教程，把教程中要求练习的代码，提交到此目录下。按教程要求，本教程学习完后的练习的样子应该是这样的： 
-![test](../.resources/web-tour/images/1.png)
+![test](/web-tour/images/1.png)
 :::
 
 :::warning 注意
@@ -43,8 +43,8 @@
 :::tip 综合练习
 实现登陆、注册页。具体页面草图如下：
 
-* [登录页](https://raw.githubusercontent.com/edboffical/ByteKnowdgeBase/master/docs/.resources/web-tour/images/2.png)
-* [注册页](https://raw.githubusercontent.com/edboffical/ByteKnowdgeBase/master/docs/.resources/web-tour/images/3.png)
+* [登录页](/web-tour/images/2.png)
+* [注册页](/web-tour/images/3.png)
 
 要求：
 
