@@ -43,8 +43,8 @@
 :::tip 综合练习
 实现登陆、注册页。具体页面草图如下：
 
-* <a href="../.resources/web-tour/images/1.png">登录页</a>
-* [注册页](/assets/img/html-css-register-login-page.png)
+* [登录页](https://raw.githubusercontent.com/edboffical/ByteKnowdgeBase/master/docs/.resources/web-tour/images/2.png)
+* [注册页](https://raw.githubusercontent.com/edboffical/ByteKnowdgeBase/master/docs/.resources/web-tour/images/3.png)
 
 要求：
 
