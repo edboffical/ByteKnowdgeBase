@@ -18,3 +18,11 @@
 :::warning 注意
 教程中练习的代码不允许复制粘贴，请一个个字母敲出来，这样会比较深刻。为节省时间，教程中大段的文字可以复制粘贴。之后的练习练习，都采用此规则。
 :::
+
+## 2.HTML
+
+学习 MDN 的 [《HTML -- 构建 Web》](https://developer.mozilla.org/zh-CN/docs/Learn/HTML) 教程。要求：
+* 《HTML 介绍》 全部内容。 完成练习 [《标记一封信》](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)、[《结构化一个页面的内容》](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)。
+* 《多媒体与嵌入》，只需学习 <HTML 中的图片>。
+* 《HTML 表格》，全部内容。完成练习 《Assessment: Structuring planet data》。
+* 《HTML 表单》，只需学习 <HTML表单指南>、<您的首个 HTML表单>、<如何构建 HTML 表单>、<原生表单部件>。
