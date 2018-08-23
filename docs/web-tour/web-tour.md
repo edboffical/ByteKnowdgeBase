@@ -172,6 +172,7 @@ MVC 模式是软件工程中的一种架构模式，它把软件系统分成三�
 
 * [《谈谈MVC模式》](http://www.ruanyifeng.com/blog/2007/11/mvc.html)
 * [《MVC理解》](http://www.digpage.com/mvc.html)
+
 拓展了解：
 
 * [MVC模式](https://zh.wikipedia.org/wiki/MVC)
