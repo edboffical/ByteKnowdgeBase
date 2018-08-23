@@ -38,7 +38,7 @@
 * 《样式化区块》，全部内容。完成练习 [《创建精美的信纸》](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper)。
 * 《CSS 排版概述》，不做要求。
 
-以上练习提交到自己的代码仓库中 `css-basic` 目录下，每个小练习，各自建立子目录，子目录名自定。
+以上练习提交到自己的代码仓库中 `css-basic` 目录下，每个小练习，各自建立子目录，子目录名自定。
 
 :::tip 综合练习
 实现登陆、注册页。具体页面草图如下：
