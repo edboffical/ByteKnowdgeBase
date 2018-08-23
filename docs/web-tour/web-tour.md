@@ -141,3 +141,25 @@
 下载 [php-basic-exercise.zip](/web-tour/files/php-basic-exercise.zip)，解压到自己的代码仓库下 `php-basic-exercise` 目录。
 具体要求，见代码目录下的 README.md 文件。
 :::
+
+## 9. PHP 面向对象基础
+
+传统的面向过程编程，通常是将任务视为一系列的顺序指令或者一条条操作步骤，便于理解，但当项目规模越来越大时维护和重用会很困难，面向对象（Object Oriented），则强调对任务进行抽象，抽象出对象以及对象的状态和行为，映射到程序模型中即：类、实例、方法、属性、各种数据结构。面向对象可细分为三个方面：
+
+* 面向对象分析（OOA, Object Oriented Analysis）
+* 面向对象设计（OOD, Object Oriented Design）
+* 面向对象编程（OOP, Object Oriented Programming）
+
+学习以下内容：
+
+* [面向对象入门](https://www.imooc.com/learn/887)。
+* [PHP类与对象](http://php.net/manual/zh/language.oop5.php)：仅学习“简介、基本概念、属性、类常量、自动加载类、构造函数和析构函数、访问控制、对象继承、范围解析操作符、抽象类、对象接口、重载、类型约束”部分即可。
+* [《PHP 异常处理》](http://www.w3school.com.cn/php/php_exception.asp)
+
+拓展了解：
+
+* [面向对象程序设计](https://zh.wikipedia.org/wiki/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1)
+
+:::tip 练习
+在自己的代码仓库下，新建目录 `php-exception-exercise`；将本节学习过程中的练习代码提交到此目录下。
+:::
