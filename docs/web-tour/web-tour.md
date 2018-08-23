@@ -1,4 +1,4 @@
-# Web 开发者基础入门
+# Web 之旅
 
 ## 1.Web 入门
 
@@ -48,9 +48,50 @@
 
 要求：
 
-1. **纯手工打造**页面的HTML、CSS，不允许使用第三方类库。
+1. **纯手工打造**页面的 HTML、CSS，不允许使用第三方类库。
 2. 页面的色调，不做要求，可自由发挥 。
 3. 头部导航条，宽度 100%，全屏撑满。
 
 将本次练习提交到自己的代码仓库 `html-css-exercise` 目录。
+:::
+
+## 4.Javascript
+
+学习 MDN 的 [《JavaScript — 用户端动态脚本》](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript) 教程。要求：
+
+* 《JavaScript 第一步》，全部学习。完成练习 [《蠢萌故事生成器》](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript)。
+* 《JavaScript 基础要件》，全部学习。完成练习 [《相片走廊》](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript)。
+* 《JavaScript 对象介绍》，全部学习。完成练习 [《实践对象构造》](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Object_building_practice)、 [《向“弹跳球”演示程序添加新功能》](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/%E5%90%91%E2%80%9C%E5%BC%B9%E8%B7%B3%E7%90%83%E2%80%9D%E6%BC%94%E7%A4%BA%E7%A8%8B%E5%BA%8F%E6%B7%BB%E5%8A%A0%E6%96%B0%E5%8A%9F%E8%83%BD)。
+* 《客户端网页 API》，只需学习 [<Web API简介>](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)、[<操作文档>](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)、[<从服务器获取数据>](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)。
+* 将本次练习提交到自己的代码仓库的 `javascript-basic` 目录下，每个小练习，各自建立子目录，子目录名自定。
+
+## 6.jQuery
+
+* 学习廖雪峰的 [《JavaScript教程》](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434499993118b8173572625b4afe93a8b19dd707ea1d000) 中的 jQuery章节 。
+* 学习 [《jQuery插件——Validation Plugin》](https://www.imooc.com/learn/385)。
+
+:::tip 练习
+在自己的代码仓库中，创建目录 `jquery-execrise`，复制 `html-css-exercise` 练习的代码到此目录下。使用 [jquery-validation](https://jqueryvalidation.org/) 给登陆、注册页面加上表单校验，具体校验规则见草图：
+
+* [登录页](/web-tour/images/4.png)
+* [注册页](/web-tour/images/5.png)
+:::
+
+## 7.Bootstrap
+
+学习 [Bootstrap](http://code.z01.com/v4/docs/) 官网教程。
+
+:::tip 练习
+
+用 Bootstrap 实现以下页面，见草图：
+
+* [登陆页](/web-tour/images/4.png)
+* [注册页](/web-tour/images/5.png)
+* [用户管理页](/web-tour/images/6.png)
+* [用户添加模块模态框](/web-tour/images/7.png)
+* [用户信息编辑模态框](/web-tour/images/8.png)
+* [用户详情显示模态框](/web-tour/images/9.png)
+* [我的设置页](/web-tour/images/10.png)
+
+需要用到栅格系统、Modal、Table、Form、Tab、Button 等组件。将本次练习提交到自己的代码仓库 `bootstrap-exercise` 目录。
 :::
