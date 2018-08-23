@@ -65,7 +65,7 @@
 * 《客户端网页 API》，只需学习 [<Web API简介>](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)、[<操作文档>](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)、[<从服务器获取数据>](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)。
 * 将本次练习提交到自己的代码仓库的 `javascript-basic` 目录下，每个小练习，各自建立子目录，子目录名自定。
 
-## 6.jQuery
+## 5.jQuery
 
 * 学习廖雪峰的 [《JavaScript教程》](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434499993118b8173572625b4afe93a8b19dd707ea1d000) 中的 jQuery章节 。
 * 学习 [《jQuery插件——Validation Plugin》](https://www.imooc.com/learn/385)。
@@ -77,7 +77,7 @@
 * [注册页](/web-tour/images/5.png)
 :::
 
-## 7.Bootstrap
+## 6.Bootstrap
 
 学习 [Bootstrap](http://code.z01.com/v4/docs/) 官网教程。
 
