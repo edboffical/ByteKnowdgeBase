@@ -163,3 +163,59 @@
 :::tip 练习
 在自己的代码仓库下，新建目录 `php-exception-exercise`；将本节学习过程中的练习代码提交到此目录下。
 :::
+
+## 10. MVC 模式简介
+
+MVC 模式是软件工程中的一种架构模式，它把软件系统分成三个基本部分：模型（Model）、视图（View）、控制器（Controller），此模式通过对业务实现进行拆分解耦合，方便了拓展、维护、复用。
+
+学习以下内容：
+
+* [《谈谈MVC模式》](http://www.ruanyifeng.com/blog/2007/11/mvc.html)
+* [《MVC理解》](http://www.digpage.com/mvc.html)
+拓展了解：
+
+* [MVC模式](https://zh.wikipedia.org/wiki/MVC)
+
+:::tip 练习
+
+实现简易版的 MVC 模式，改写上一个练习 `php-basic-exercise` 的代码，基于 MVC 模式实现，并将上一个练习中的 `include/functions` 实现的函数，改写为类的方法。
+
+步骤：
+
+1. 新建 `php-mvc-exercise` 目录，复制 `php-basic-exercise` 的代码到此目录中。
+2. 新建 `index.php` 文件，作为所有页面的入口文件，各个页面的入口地址为：
+    1. 登陆页：`index.php?controller=auth&action=login`
+    2. 退出：`index.php?controller=auth&action=logout`
+    3. 注册页：`index.php?controller=register&action=index`
+    4. 用户管理页：`index.php?controller=user&action=index`
+    5. 添加用户模态框：`index.php?controller=user&action=addModal`
+    6. 编辑用户模态框：`index.php?controller=user&action=editModal`
+    7. 删除用户：`index.php?controller=user&action=delete`
+    8. 我的设置页：`index.php?controller=my&action=settings`
+3. 实现 `index.php` 的逻辑：
+    1. 从 $_GET 中获取 controller 和 action 两个参数；
+    2. 根据 controller 参数，载入相应的 Controller 文件，并实例化 Controller 对象 `$controller`；
+    3. 调用 `$controller` 相应的 action 方法。
+4. 在子目录 `classes` 下，创建 `auth-controller.class.php`、`register-controller.class.php`、`user-controller.class.php`，分别实现 `AuthController`、`RegisterController`、`UserController`，代码逻辑大致如下：
+
+``` php
+<?php
+class AuthController
+{
+    public function loginAction()
+    {
+        // @todo 登陆逻辑
+    }
+
+    public function logoutAction()
+    {
+        // @todo 退出逻辑
+    }
+}
+```
+
+5. 将之前的代码，迁移到各个 Action 下。
+6. 在 `classes` 子目录下，新建 `user-model.class.php`，把对 `user.txt` 的增删改查的逻辑封装到 `UserModel` 类。
+7. 改写 `includes/functions.php` 中的函数，为类的方法，每个类一个文件，文件名以 `.class.php` 结尾，放到子目录 `classes` 下。
+8. 使用异常(Exception)，改写错误处理机制，并使用 `set_exception_handler` 函数，设置全局异常处理机制。
+:::
