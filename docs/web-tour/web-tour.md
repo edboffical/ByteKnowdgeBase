@@ -1,6 +1,6 @@
 # Web 之旅
 
-## 1.Web 入门
+## 1. Web 入门
 
 学习 MDN 的教程 [《Web 入门》](https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web) 教程。要求：
 
@@ -19,7 +19,7 @@
 教程中练习的代码不允许复制粘贴，请一个个字母敲出来，这样会比较深刻。为节省时间，教程中大段的文字可以复制粘贴。之后的练习练习，都采用此规则。
 :::
 
-## 2.HTML
+## 2. HTML
 
 学习 MDN 的 [《HTML -- 构建 Web》](https://developer.mozilla.org/zh-CN/docs/Learn/HTML) 教程。要求：
 * 《HTML 介绍》 全部内容。 完成练习 [《标记一封信》](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)、[《结构化一个页面的内容》](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)。
@@ -29,7 +29,7 @@
 
 将本次练习提交到自己的代码仓库的 `html-basic` 目录下，每个小练习，各自建立子目录，子目录名自定。
 
-## 3.CSS
+## 3. CSS
 
 学习 MDN 的 [《CSS -- 设计 Web》](https://developer.mozilla.org/zh-CN/docs/Learn/CSS) 教程。要求：
 
@@ -55,7 +55,7 @@
 将本次练习提交到自己的代码仓库 `html-css-exercise` 目录。
 :::
 
-## 4.Javascript
+## 4. Javascript
 
 学习 MDN 的 [《JavaScript — 用户端动态脚本》](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript) 教程。要求：
 
@@ -65,7 +65,7 @@
 * 《客户端网页 API》，只需学习 [<Web API简介>](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)、[<操作文档>](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)、[<从服务器获取数据>](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)。
 * 将本次练习提交到自己的代码仓库的 `javascript-basic` 目录下，每个小练习，各自建立子目录，子目录名自定。
 
-## 5.jQuery
+## 5. jQuery
 
 * 学习廖雪峰的 [《JavaScript教程》](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434499993118b8173572625b4afe93a8b19dd707ea1d000) 中的 jQuery章节 。
 * 学习 [《jQuery插件——Validation Plugin》](https://www.imooc.com/learn/385)。
@@ -77,7 +77,7 @@
 * [注册页](/web-tour/images/5.png)
 :::
 
-## 6.Bootstrap
+## 6. Bootstrap
 
 学习 [Bootstrap](http://code.z01.com/v4/docs/) 官网教程。
 
@@ -94,4 +94,50 @@
 * [我的设置页](/web-tour/images/10.png)
 
 需要用到栅格系统、Modal、Table、Form、Tab、Button 等组件。将本次练习提交到自己的代码仓库 `bootstrap-exercise` 目录。
+:::
+
+## 7. 前端编码规范
+
+学习：
+
+* [谷歌 HTML/CSS 规范](https://segmentfault.com/a/1190000007023192)[[英文版]](https://google.github.io/styleguide/htmlcssguide.html)
+* [Airbnb JavaScript Style Guide(ES5版)](https://github.com/sivan/javascript-style-guide/blob/master/es5/README.md)
+
+## 8. PHP 语言基础
+在学习 PHP 之前，需先搭建 PHP 开发环境，参见 [《PHP开发环境搭建》]()。下面列出了 PHP 入门第一步需要掌握的内容，**请边学习边实践**。
+
+简介：
+
+* [PHP 是什么？](http://php.net/manual/zh/intro-whatis.php)
+* [PHP 能做什么？](http://php.net/manual/zh/intro-whatcando.php)
+
+简明教程：
+
+* [第一个PHP页面](http://php.net/manual/zh/tutorial.firstpage.php)
+* [实用的脚本](http://php.net/manual/zh/tutorial.useful.php)
+* [处理表单](http://php.net/manual/zh/tutorial.forms.php)
+
+语言参考：
+
+* [基本语法](http://php.net/manual/zh/language.basic-syntax.php)
+* [类型](http://php.net/manual/zh/language.types.php)
+* [变量](http://php.net/manual/zh/language.variables.php)
+* [常量](http://php.net/manual/zh/language.constants.php)
+* [表达式](http://php.net/manual/zh/language.expressions.php)
+* [运算符](http://php.net/manual/zh/language.operators.php)
+* [流程控制](http://php.net/manual/zh/language.control-structures.php)
+* [函数](http://php.net/manual/zh/language.functions.php)
+* [预定义变量](http://php.net/manual/zh/reserved.variables.php)
+* [Session](http://php.net/manual/zh/session.examples.basic.phps)
+
+函数参考：
+
+* [字符串处理函数](http://php.net/manual/zh/ref.strings.php) chr, echo, explode, implode, lcfirst, ltrim, nl2br, print, rtrim, sprintf, str_ireplace, str_split, strip_tags, stripos, strlen, strpos, strtolower, strtoupper, substr, trim, ucfirst
+* [数组处理函数](http://php.net/manual/zh/book.array.php) array_key_exists, array_keys, array_merge, array_pop, array_push, array_rand, array_replace, array_search, array_shift, array_values, count, in_array, ksort, list, shuffle, sort
+* [日期/时间函数](http://php.net/manual/zh/ref.datetime.php) date, time, strtotime
+* [文件操作函数](http://php.net/manual/zh/ref.filesystem.php) basename, chmod, chown, fopen, copy, delete, dirname, fclose, feof, fgetc, fgets, file_exists, file_get_contents, file_put_contents, filesize, fopen, fputs, fread, fwrite, is_dir, is_executable, is_file, is_readable, is_writable, mkdir, pathinfo, realpath, rename, rmdir, unlink
+
+:::tip 练习
+下载 [php-basic-exercise.zip](/web-tour/files/php-basic-exercise.zip)，解压到自己的代码仓库下 `php-basic-exercise` 目录。
+具体要求，见代码目录下的 README.md 文件。
 :::
