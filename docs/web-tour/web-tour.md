@@ -220,3 +220,280 @@ class AuthController
 7. 改写 `includes/functions.php` 中的函数，为类的方法，每个类一个文件，文件名以 `.class.php` 结尾，放到子目录 `classes` 下。
 8. 使用异常(Exception)，改写错误处理机制，并使用 `set_exception_handler` 函数，设置全局异常处理机制。
 :::
+
+## 11. MySQL 基础 以及 PDO 的使用
+
+* 学习视频教程 [《MySQL 入门》](https://www.jikexueyuan.com/course/627.html)。
+* 学习 [《PHP数据库抽象层PDO》](https://www.jikexueyuan.com/course/2546.html)，第5课时 <事务处理>可暂时先不学习。教程中使用的环境为 Windows、Apache，请自行对应到我们的环境 Ubuntu、Nginx。
+* 学习 [《数据库操作函数之PDO》](http://php.net/manual/zh/intro.pdo.php)，学习其中的<简介>, <连接与连接管理>, <预处理语句>(存储过程无需学习), <错误与错误处理>, <PDO 类>, <PDOStatement 类>, <PDOException 异常类>。
+
+:::tip 练习
+
+改写 `php-mvc-exercise` 练习，将数据保存到数据库。练习步骤：
+
+1. 创建数据库 `bootcamp`。
+2. 创建表 `user`。
+3. 创建 `php-db-exercise`，复制 `php-mvc-exercise` 的代码到此目录。
+4. 创建 `config.php`，用于配置数据库的参数，代码大致如下：
+
+```php
+<?php
+
+return [
+    'host' => '127.0.0.1',
+    'dbname' => 'bootcamp',
+    'user' => 'root',
+    'password' => '',
+];
+```
+
+5. 改写 `UserModel` 类，读取 `config.php` 中的配置，用 PDO 连接数据库，存取数据。
+:::
+
+## 12. PHP 命名空间
+
+* 学习 [《命名空间》](http://php.net/manual/zh/language.namespaces.php) 的除FAQ以外的所有内容。
+* 学习 [`spl_autoload_register`](http://php.net/manual/zh/function.spl-autoload-register.php) 函数的使用。
+
+:::tip 练习
+
+1. 创建 `php-namespace-exercise` 子目录，复制上一练习中的代码到此目录。
+2. 为所有的 `Controller` 添加 `App\Controller` 的命名空间。
+3. 为 `Model` 类添加 `App\Model` 的命名空间。
+4. 使用 `spl_autoload_register` 函数，注册类的自动载入机制。
+:::
+
+## 13. 包管理 Composer
+
+学习 Composer 的中文文档的 [《简介》](https://docs.phpcomposer.com/00-intro.html)、[《基本用法》](https://docs.phpcomposer.com/01-basic-usage.html)、[《库（资源包）》](https://docs.phpcomposer.com/02-libraries.html)。
+
+:::warning Composer 加速配置
+
+由于访问国外服务器比较慢，建议使用使用国内的镜像安装 Composer，并配置 Composer 中国镜像，以加快程序包的下载速度：
+
+```
+sudo wget https://dl.laravel-china.org/composer.phar -O /usr/local/bin/composer
+sudo chmod a+x /usr/local/bin/composer
+composer config -g repo.packagist composer https://packagist.phpcomposer.com
+```
+:::
+
+:::tip 练习
+
+1. 创建 `php-composer-exercise` 子目录，复制上一练习中的代码到此目录；
+2. 在 `php-composer-exercise` 目录下，执行： `composer init`，依次回答一下内容，生成 `composer.json` 配置文件：
+```
+Package name (<vendor>/<name>): codeages/bootcamp
+Description []: (回车)
+Author: (回车)
+Minimum Stability : (回车)
+Package Type: project
+License: (回车)
+Would you like to define your dependencies :yes
+Search for a package: monolog/monolog
+Enter the version constraint to require: (回车)
+```
+3. 创建子目录 `src`。
+4. 在 `composer.json` 文件中，增加配置，设置 子目录 `src` 的命名空间为 `App\\`。
+5. 调整所有的类的代码文件，放置到 `src` 目录下相应位置。
+6. 在 `index.php` 中，引入 `vendor/autoload.php`，利用 Composer Autoload 自动载入类文件。
+:::
+
+## 14. Twig 模板引擎
+
+学习 Twig 官方文档：
+* [Introduction](https://twig.symfony.com/doc/2.x/intro.html)
+* [Installation Twig for Template Designers](https://twig.symfony.com/doc/2.x/templates.html)
+* [Twig Reference](https://twig.symfony.com/doc/2.x/) 的 Tags、Filters、Functions、Tests 部分。
+
+:::tip 练习
+
+1. 创建 `php-twig-exercise` 子目录，复制 `php-composer-exercise` 的代码到此目录。
+2. 使用 Twig 的方式，修改 `templates` 目录下的模板文件，每个文件以 `.html.twig` 结尾。
+3. 创建 `page-base.html.twig`，使用 `extends` 的方式来实现页面代码的重用，并改写原有的页面代码。
+4. 创建 `modal-base.html.twig`，使用 `extends` 的方式来实现模态框代码的重用，并改写原有的模态框代码。
+:::
+
+## 15. 单元测试
+学习：
+
+* [单元测试](https://zh.wikipedia.org/wiki/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95)
+* [PHPUnit 官网文档](https://phpunit.readthedocs.io/zh_CN/latest/)
+
+:::tip 练习
+
+创建 `php-phpunit-exercise` 子目录，复制上一练习中的代码到此目录；
+新建 `tests` 目录，在此目录下面，创建单元测试文件，对上一练习中的 Model 类，以及 Util 类中的每个方法，加上单元测试。
+:::
+
+## 16. 分层架构
+学习：
+
+* [三层(3-tier architecture）】——初次遇见你](https://blog.csdn.net/zt15732625878/article/details/50809170)
+* [三层架构，数据层(DAL)、逻辑层(BLL)、表示层(UI)](https://singee77.com/article/386.html)
+
+:::tip 练习
+
+1. 创建 `php-3-tier-exercise` 子目录，复制上一练习中的代码到此目录；
+2. 将 `UserModel` 类中的代码拆分为 `UserService`、`UserDao`，`UserDao` 封装访问数据库的接口提供给 `UserService` 调用，`UserService` 封装业务逻辑，给 Controller 调用。
+3. 为 `UserService` 和 `UserDao` 编写单元测试。
+:::
+
+## 17. 设计模式：单例模式
+
+学习：
+
+* [单例模式](https://zh.wikipedia.org/wiki/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F)
+* [PHP 设计模式系列 —— 单例模式（Singleton）](http://laravelacademy.org/post/2599.html)
+
+:::tip 练习
+
+1. 创建 `php-singleton-exercise` 子目录，复制上一练习中的代码到此目录；
+2. 创建 PDO 数据库连接的单例类 `App\Component\Database\PDOConnection`，实现以下接口，并编写单元测试：
+```php
+<?php
+namespace App\Component\Database;
+
+interface DbConnection
+{
+    /**
+     * 向表插入数据
+     *
+     * @param string $table 表名
+    * @param array $fields 数据字段
+    * @return int 当前插入记录的主键 id 值
+    */
+    public function insert($table, $fields);
+
+    /**
+     * 根据主键 id 更新数据库记录
+     *
+     * @param string $table 表名
+    * @param int $id 需要跟新的记录的 id
+    * @param string $fields 需要更新的数据字段
+    * @return int 更新的行数
+    */
+    public function update($table, $id, $fields);
+
+    /**
+     * 根据主键 id 删除数据记录
+     *
+     * @param string $table 表名
+    * @param int $id 需要删除的记录的 id
+    * @return int 删除的行数
+    */
+    public function delete($table, $id);
+
+    /**
+     * 根据主键 id 查询一行数据
+     *
+     * @param string $table 表名
+    * @param int $id 需要查询的记录的 id
+    * @return array|null 数据存在则返回数据数组，不存在则返回 null
+    */
+    public function get($table, $id);
+
+    /**
+     * 根据查询条件查询一行数据
+     * 
+     * 例如查询用户名为 'lilei' 的用户：
+     * $user =  $this->getByField('user', ['username' => 'lilei']);
+     *
+     * @param string $table 
+    * @param string $fields 查询条件的字段
+    * @return array|null 数据存在则返回数据数组，不存在则返回 null
+    */
+    public function getByFields($table, $fields);
+
+    /**
+     * 根据查询条件查询多行数据
+     * 
+     * 例如查询职业为学生，性别为男的第 1~100 个用户数据：
+     * $users = $this->findByFields('user', ['job' => 'student', 'gender' => 'male], 0, 100);
+     *
+     * @param string $table 表名
+    * @param array $fields 查询条件
+    * @param int $start 查询记录集的开始行数
+    * @param int $limit 查询条数
+    * @return array 数据存在则返回数据集的数组，不存在则返回空数组
+    */
+    public function findByFields($table, $fields, $start, $limit);
+
+    /**
+     * 根据查询条件查询数据记录的行数
+     *
+     * @param string $table 表名
+    * @param array $fields 查询条件
+    * @return int
+    */
+    public function countByFields($table, $fields);
+
+    /**
+     * 获得 PDO 数据库连接对象
+     *
+     * @return \PDO
+    */
+    public function getPDO();
+}
+```
+
+3. 使用 `App\Component\Database\PDOConnection` 类中的方法，替代 `UserModel` 类中的相关数据库查询代码。
+:::
+
+## 18. 设计模式：工厂模式
+
+学习设计模式 [《PHP设计模式（一）简单工厂模式 （Simple Factory For PHP）》](https://www.cnblogs.com/wilburxu/p/6086394.html)。
+
+:::tip 练习
+
+1. 创建 `php-factory-exercise` 子目录，复制上一练习中的代码到此目录；
+2. 创建 `UserDao` 接口；
+3. 创建 `UserDaoFileImpl` 类，使用文件做为数据存储，实现 `UserDao` 的接口。
+4. 创建 `UserDaoDbImpl` 类，使用 MySQL 作为数据存储，实现 `UserDao` 的接口。
+5. 创建 `UserDao` 的工厂类 `UserDaoFactory，用于创建` `UserDaoFileImpl` 或 `UserDaoDbImpl`。
+6. `UserService` 通过 `UserDaoFactory` 创建 `UserDao`，具体创建哪个实现的 Dao，由系统的配置决定。
+7. 为新增的每个类写单元测试。
+:::
+
+## 19. 控制反转(IoC)
+1. 学习 [IoC 感念]()。
+2. 学习 [Pimple](https://pimple.symfony.com/)。
+
+:::tip 练习
+
+1. 创建 `php-container-exercise` 子目录，复制上一练习中的代码到此目录；
+2. 使用 Pimple Container 管理 Service 、 Dao 类的创建。
+:::
+
+## 20. Symfony
+使用原生的PHP进行Web开发时，应对客户端的请求，通常是一个请求对应一个PHP脚本，使用 `$_REQUEST`、`$_POST` 等提取HTTP数据，使用PDO建立数据库连接、CURD、关闭连接。 Symfony2作为MVC框架，大大简化了这些操作，Symfony的Controller组件让我们可以在一个PHP脚本（类）中定义对多个请求的处理方法，请求的参数直接作为参数传递给方法，同时对Request、Response进行封装，代码更简介优雅。
+
+:::warning 注意
+
+Symfony 最新版本为 4.1 ，本教程中我们学习 3.4 版本的 Symfony。
+
+文档入口地址： http://symfony.com/doc/3.4/index.html
+:::
+
+学习文档 《Getting Started》Chapter 1 ~ 6 部分后，完成以下练习。 其余部分文档，请先学习以下内容：
+
+* [Controllers](http://symfony.com/doc/3.4/book/controller.html)
+* [Routing](https://symfony.com/doc/3.4/routing.html)
+* [Templating by Twig](https://symfony.com/doc/3.4/templating.html)
+* [Configuration](https://symfony.com/doc/3.4/configuration.html)
+* [Bundles](https://symfony.com/doc/3.4/bundles.html)
+* [Security](https://symfony.com/doc/3.4/security.html)
+* [Service Container](http://symfony.com/doc/3.4/book/service_container.html)
+
+:::tip 练习
+
+1. 用 Symfony 的脚手架命令创建项目 `php-symfony-exercise`。
+2. 将上一练习中的代码，搬迁到 Symfony 的框架结构下。
+:::
+
+## 21. 正则表达式
+学习：
+
+* [正则表达式快速入门](http://deerchao.net/tutorials/regex/regex.htm)
+* [PHP正则相关API](http://php.net/manual/zh/book.pcre.php)
+#
