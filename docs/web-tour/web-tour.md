@@ -456,7 +456,7 @@ interface DbConnection
 :::
 
 ## 19. 控制反转(IoC)
-1. 学习 [IoC 感念]()。
+1. 学习 [IoC 感念](../oop/ioc.md)。
 2. 学习 [Pimple](https://pimple.symfony.com/)。
 
 :::tip 练习
