@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ubuntu 安全配置 | 8B知识库</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.ea7cecec.css" as="style"><link rel="preload" href="/assets/js/app.4d603897.js" as="script"><link rel="preload" href="/assets/js/14.ca3148ba.js" as="script"><link rel="prefetch" href="/assets/js/10.fbb0508f.js"><link rel="prefetch" href="/assets/js/2.cda51ec0.js"><link rel="prefetch" href="/assets/js/3.814d7077.js"><link rel="prefetch" href="/assets/js/4.75a5cdd8.js"><link rel="prefetch" href="/assets/js/5.95cbb943.js"><link rel="prefetch" href="/assets/js/6.3d7b26ae.js"><link rel="prefetch" href="/assets/js/7.74721aa4.js"><link rel="prefetch" href="/assets/js/8.b442d010.js"><link rel="prefetch" href="/assets/js/9.ce270a18.js"><link rel="prefetch" href="/assets/js/11.a5e033c8.js"><link rel="prefetch" href="/assets/js/12.23c29f13.js"><link rel="prefetch" href="/assets/js/13.9649ca70.js"><link rel="prefetch" href="/assets/js/15.7c4a717d.js"><link rel="prefetch" href="/assets/js/16.1cf87b10.js"><link rel="prefetch" href="/assets/js/17.75cf37c2.js"><link rel="prefetch" href="/assets/js/18.2975a34f.js"><link rel="prefetch" href="/assets/js/19.1faf98fc.js"><link rel="prefetch" href="/assets/js/20.d21bf986.js"><link rel="prefetch" href="/assets/js/21.3323d44d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ea7cecec.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">8B知识库</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">8B知识库</a></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>coding-standards</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>linux</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/linux/linux-howtos.html" class="sidebar-link">Linux HowTos</a></li><li><a href="/linux/linux-iptables.html" class="sidebar-link">Iptables 使用指南</a></li><li><a href="/linux/linux-lnmp-optimizing.html" class="sidebar-link">LNMP Server优化</a></li><li><a href="/linux/linux-security.html" class="sidebar-link">Linux 安全</a></li><li><a href="/linux/linux-ubuntu-howtos.html" class="sidebar-link">Ubuntu HowTos</a></li><li><a href="/linux/linux-ubuntu-remove-home-directory-encryption.html" class="sidebar-link">Ubuntu 去除加密的 Home 目录</a></li><li><a href="/linux/linux-ubuntu-security.html" class="active sidebar-link">Ubuntu 安全配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/linux-ubuntu-security.html#ssh加固" class="sidebar-link">SSH加固</a></li><li class="sidebar-sub-header"><a href="/linux/linux-ubuntu-security.html#防火墙配置" class="sidebar-link">防火墙配置</a></li></ul></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>mysql</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>nginx</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>oop</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>redis</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>tools</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>web-tour</span> <span class="arrow right"></span></p> <!----></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="ubuntu-安全配置"><a href="#ubuntu-安全配置" aria-hidden="true" class="header-anchor">#</a> Ubuntu 安全配置</h1> <h2 id="ssh加固"><a href="#ssh加固" aria-hidden="true" class="header-anchor">#</a> SSH加固</h2> <p>编辑 <code>/etc/ssh/sshd_config</code> 修改如下配置：</p> <div class="language- extra-class"><pre class="language-text"><code>PasswordAuthentication no # 禁止密码登陆
+PermitRootLogin no # 禁止root登陆
+</code></pre></div><p>可通过以下shell修改：</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> <span class="token function">sed</span> -i <span class="token string">'s/^\(#\?\s*PasswordAuthentication\s.*\)/PasswordAuthentication no/g'</span> /etc/ssh/sshd_config
+<span class="token function">sudo</span> <span class="token function">sed</span> -i <span class="token string">'s/^\(#\?\s*PermitRootLogin\s.*\)/PermitRootLogin no/g'</span> /etc/ssh/sshd_config
+<span class="token function">sed</span> -n -e <span class="token string">'/^\(#\?\s*PasswordAuthentication\s.*\)/p'</span> -e <span class="token string">'/^\(#\?\s*PermitRootLogin\s.*\)/p'</span> /etc/ssh/sshd_config
+</code></pre></div><p>shell的最后一行输出了修改后的配置，请检查修改是否成功！</p> <p>配置需在SSH服务重启后才能生效：<code>service ssh restart</code>。</p> <h2 id="防火墙配置"><a href="#防火墙配置" aria-hidden="true" class="header-anchor">#</a> 防火墙配置</h2> <h3 id="添加iptables规则"><a href="#添加iptables规则" aria-hidden="true" class="header-anchor">#</a> 添加iptables规则</h3> <p>以下为示例的iptables规则，请根据实际情况修改：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>iptables -P INPUT ACCEPT
+iptables -F INPUT
+iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A INPUT -p TCP --dport 80 -j ACCEPT
+iptables -A INPUT -p TCP -s <span class="token punctuation">{</span>JUMPSERVER_IP<span class="token punctuation">}</span> --dport 22 -j ACCEPT
+iptables -A INPUT -p TCP -s <span class="token punctuation">{</span>ZABBIX_SERVER_IP<span class="token punctuation">}</span> --dport 10050 -j ACCEPT
+iptables -A INPUT -p icmp -s <span class="token punctuation">{</span>JUMPSERVER_IP<span class="token punctuation">}</span> -j ACCEPT
+iptables -P INPUT DROP
+</code></pre></div><p>建议：SSH 22端口的规则，设置2条及以上的规则，以免JUMPSERVER的单点故障，导致无法SSH登陆。</p> <h3 id="iptables规则自动保存-加载："><a href="#iptables规则自动保存-加载：" aria-hidden="true" class="header-anchor">#</a> iptables规则自动保存/加载：</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>iptables-save <span class="token operator">&gt;</span> /etc/iptables.rules
+</code></pre></div><h3 id="网卡启动自动加载脚本-etc-network-if-pre-up-d-iptables"><a href="#网卡启动自动加载脚本-etc-network-if-pre-up-d-iptables" aria-hidden="true" class="header-anchor">#</a> 网卡启动自动加载脚本<code>/etc/network/if-pre-up.d/iptables</code></h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token keyword">echo</span> <span class="token string">'#!/bin/sh
+iptables-restore &lt; /etc/iptables.rules
+exit 0'</span> <span class="token operator">&gt;</span> /etc/network/if-pre-up.d/iptables
+</code></pre></div><h3 id="网卡卸载自动保存脚本-etc-network-if-post-down-d-iptables"><a href="#网卡卸载自动保存脚本-etc-network-if-post-down-d-iptables" aria-hidden="true" class="header-anchor">#</a> 网卡卸载自动保存脚本<code>/etc/network/if-post-down.d/iptables</code></h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token keyword">echo</span> <span class="token string">'#!/bin/sh
+iptables-save -c &gt; /etc/iptables.rules
+if [ -f /etc/iptables.rules ]; then
+  iptables-restore &lt; /etc/iptables.rules
+fi
+exit 0'</span> <span class="token operator">&gt;</span> /etc/network/if-post-down.d/iptables
+</code></pre></div><h3 id="加可执行权限："><a href="#加可执行权限：" aria-hidden="true" class="header-anchor">#</a> 加可执行权限：</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">chmod</span> +x /etc/network/if-post-down.d/iptables
+<span class="token function">sudo</span> <span class="token function">chmod</span> +x /etc/network/if-pre-up.d/iptables
+</code></pre></div></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/linux/linux-ubuntu-remove-home-directory-encryption.html" class="prev">
+          Ubuntu 去除加密的 Home 目录
+        </a></span> <span class="next"><a href="/mysql/mysql-howtos.html">
+          MySQL HowTos
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/assets/js/14.ca3148ba.js" defer></script><script src="/assets/js/app.4d603897.js" defer></script>
+  </body>
+</html>

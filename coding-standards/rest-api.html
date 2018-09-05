@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>REST API 标准 | 8B知识库</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.ea7cecec.css" as="style"><link rel="preload" href="/assets/js/app.4d603897.js" as="script"><link rel="preload" href="/assets/js/7.74721aa4.js" as="script"><link rel="prefetch" href="/assets/js/10.fbb0508f.js"><link rel="prefetch" href="/assets/js/2.cda51ec0.js"><link rel="prefetch" href="/assets/js/3.814d7077.js"><link rel="prefetch" href="/assets/js/4.75a5cdd8.js"><link rel="prefetch" href="/assets/js/5.95cbb943.js"><link rel="prefetch" href="/assets/js/6.3d7b26ae.js"><link rel="prefetch" href="/assets/js/8.b442d010.js"><link rel="prefetch" href="/assets/js/9.ce270a18.js"><link rel="prefetch" href="/assets/js/11.a5e033c8.js"><link rel="prefetch" href="/assets/js/12.23c29f13.js"><link rel="prefetch" href="/assets/js/13.9649ca70.js"><link rel="prefetch" href="/assets/js/14.ca3148ba.js"><link rel="prefetch" href="/assets/js/15.7c4a717d.js"><link rel="prefetch" href="/assets/js/16.1cf87b10.js"><link rel="prefetch" href="/assets/js/17.75cf37c2.js"><link rel="prefetch" href="/assets/js/18.2975a34f.js"><link rel="prefetch" href="/assets/js/19.1faf98fc.js"><link rel="prefetch" href="/assets/js/20.d21bf986.js"><link rel="prefetch" href="/assets/js/21.3323d44d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ea7cecec.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">8B知识库</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">8B知识库</a></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>coding-standards</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/coding-standards/mysql.html" class="sidebar-link">MySQL 开发规范</a></li><li><a href="/coding-standards/naming.html" class="sidebar-link">命名规范</a></li><li><a href="/coding-standards/rest-api.html" class="active sidebar-link">REST API 标准</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/coding-standards/rest-api.html#数据格式" class="sidebar-link">数据格式</a></li><li class="sidebar-sub-header"><a href="/coding-standards/rest-api.html#http动词" class="sidebar-link">HTTP动词</a></li><li class="sidebar-sub-header"><a href="/coding-standards/rest-api.html#版本号" class="sidebar-link">版本号</a></li><li class="sidebar-sub-header"><a href="/coding-standards/rest-api.html#响应" class="sidebar-link">响应</a></li><li class="sidebar-sub-header"><a href="/coding-standards/rest-api.html#user-context" class="sidebar-link">User Context</a></li><li class="sidebar-sub-header"><a href="/coding-standards/rest-api.html#batch-request" class="sidebar-link">Batch Request</a></li></ul></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>linux</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>mysql</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>nginx</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>oop</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>redis</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>tools</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>web-tour</span> <span class="arrow right"></span></p> <!----></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="rest-api-标准"><a href="#rest-api-标准" aria-hidden="true" class="header-anchor">#</a> REST API 标准</h1> <p>本标准的定义以实用性为主，参考了Facebook等知名网站API实现方式。</p> <h2 id="数据格式"><a href="#数据格式" aria-hidden="true" class="header-anchor">#</a> 数据格式</h2> <p>以JSON作为唯一的REST API数据格式。</p> <h2 id="http动词"><a href="#http动词" aria-hidden="true" class="header-anchor">#</a> HTTP动词</h2> <p>HTTP的动词有：</p> <ul><li>GET：从服务器取出资源（一项或多项）。</li> <li>POST：在服务器新建一个资源。</li> <li>PUT：在服务器更新资源（客户端提供改变后的完整资源）。</li> <li>PATCH：在服务器更新资源（客户端提供改变的属性）。</li> <li>DELETE：从服务器删除资源。</li> <li>HEAD：获取资源的元数据。</li> <li>OPTIONS：获取信息，关于资源的哪些属性是客户端可以改变的。</li></ul> <p>以上动词，在API中我们应只使用GET、POST、DELETE。PUT、PATCH用POST替代，因为通常人们会搞不清楚POST、PUT的区别，所以索性只使用POST这个词，来表示资源的创建/更新。</p> <h2 id="版本号"><a href="#版本号" aria-hidden="true" class="header-anchor">#</a> 版本号</h2> <p>应当将API的版本号放入URL中，比如：</p> <div class="language- extra-class"><pre class="language-text"><code>https://example.com/api/v1/
+</code></pre></div><h2 id="响应"><a href="#响应" aria-hidden="true" class="header-anchor">#</a> 响应</h2> <p>服务器端API程序能返回的响应，状态码均应为200。非200的请求，均为异常请求，比如：API服务器宕机、服务内部错误、网络异常等。</p> <p>API调用方程序应根据返回的数据中，是否含<code>error</code>这个key，来判定本次API请求操作是否成功。</p> <h3 id="成功的响应"><a href="#成功的响应" aria-hidden="true" class="header-anchor">#</a> 成功的响应</h3> <p>单个资源的获取、创建、更新，应响应完整的资源结构体，比如创建或更新一个用户后应返回完整的用户结构体：</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;id&quot;: 1,
+    &quot;username&quot;: &quot;admin&quot;,
+    &quot;email&quot;: &quot;admin@example.com&quot;,
+    &quot;created_time&quot;: &quot;2016-09-21T00:27:47+08:00&quot;
+}
+</code></pre></div><p>资源结构体中的key，应均为小写字母，多个单词之间用下划线隔开。如果某个key表示时间，那么应返回ISO 8601格式标准的时间。</p> <p>获取多个资源的请求，有分页的应响应如下结构体：</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;data&quot;: [
+        {&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;},
+        {&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;},
+        {&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}
+    ],
+    &quot;paging&quot;: [
+        &quot;total&quot;: 100,
+        &quot;offset&quot;: 50,
+        &quot;limit&quot;: 10
+    ]
+}
+</code></pre></div><p><code>total</code>表示总共有多少个资源，<code>offset</code>表示本次响应返回的结果集是从第几个资源起的序号，<code>limit</code>表次本次响应返回的结果集最大个行数。</p> <p>无分页的应响应如下结构体：</p> <div class="language- extra-class"><pre class="language-text"><code>[
+    {&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;},
+    {&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;},
+    {&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}
+]
+</code></pre></div><h3 id="失败的响应"><a href="#失败的响应" aria-hidden="true" class="header-anchor">#</a> 失败的响应</h3> <p>API请求操作失败应返回如下的结构体：</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;error&quot;: {
+        &quot;message&quot; : &quot;错误描述信息。&quot;,
+        &quot;code&quot;: &quot;错误码（值为整形）&quot;
+    }
+}
+</code></pre></div><p>每个接口的文档需明确指出当前接口可能会返回的每个错误码。错误码分通用错误码，及业务错误码。约定，通用错误码的取值范围应在1 ~ 100之间，100以上的为业务错误码，常用的通用错误码有：</p> <table><thead><tr><th>Code</th> <th>Const</th> <th>Description</th> <th>HTTP Code</th></tr></thead> <tbody><tr><td>1</td> <td>API_NOT_FOUND</td> <td>API不存在</td> <td>404</td></tr> <tr><td>2</td> <td>BAD_REQUEST</td> <td>请求报文格式不正确：<br>1.请求体非json格式<br>2.未设置application/json头部</td> <td>400</td></tr> <tr><td>3</td> <td>INVALID_CREDENTIAL</td> <td>Credential不正确:<br>1.Credential格式不正确 2. Credential签名不正确</td> <td>401</td></tr> <tr><td>4</td> <td>OVERDUE_CREDENTIAL</td> <td>Credential已过期</td> <td>401</td></tr> <tr><td>5</td> <td>BANNED_CREDENTIALS</td> <td>Credential对应的用户被禁止</td> <td>401</td></tr> <tr><td>6</td> <td>INTERNAL_SERVER_ERROR</td> <td>服务内部错误，需联系管理员</td> <td>500</td></tr> <tr><td>7</td> <td>SERVICE_UNAVAILABLE</td> <td>服务暂时下线，请稍后重试:<br>1.升级维护中<br>2.过载保护中<br>3.内部服务处理超时</td> <td>503</td></tr> <tr><td>8</td> <td>INVALID_ARGUMENT</td> <td>参数缺失、参数不正确</td> <td>422</td></tr></tbody></table> <h3 id="注意事项"><a href="#注意事项" aria-hidden="true" class="header-anchor">#</a> 注意事项</h3> <p>校验类API要返回错误校验结果的，不应归类为API错误，应该按正常响应返回。</p> <p>比如校验正确返回：</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;success&quot;: true
+}
+</code></pre></div><p>比如校验失败返回：</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;success&quot;: false,
+    &quot;reason&quot;: {
+        &quot;message&quot; : &quot;username is too long&quot;,
+        &quot;type&quot;: &quot;username_invalid&quot;
+    }
+}
+</code></pre></div><h2 id="user-context"><a href="#user-context" aria-hidden="true" class="header-anchor">#</a> User Context</h2> <p>(todo)</p> <h2 id="batch-request"><a href="#batch-request" aria-hidden="true" class="header-anchor">#</a> Batch Request</h2> <p>(todo)</p></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/coding-standards/naming.html" class="prev">
+          命名规范
+        </a></span> <span class="next"><a href="/linux/linux-howtos.html">
+          Linux HowTos
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/assets/js/7.74721aa4.js" defer></script><script src="/assets/js/app.4d603897.js" defer></script>
+  </body>
+</html>

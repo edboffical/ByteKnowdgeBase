@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Iptables 使用指南 | 8B知识库</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.ea7cecec.css" as="style"><link rel="preload" href="/assets/js/app.4d603897.js" as="script"><link rel="preload" href="/assets/js/9.ce270a18.js" as="script"><link rel="prefetch" href="/assets/js/10.fbb0508f.js"><link rel="prefetch" href="/assets/js/2.cda51ec0.js"><link rel="prefetch" href="/assets/js/3.814d7077.js"><link rel="prefetch" href="/assets/js/4.75a5cdd8.js"><link rel="prefetch" href="/assets/js/5.95cbb943.js"><link rel="prefetch" href="/assets/js/6.3d7b26ae.js"><link rel="prefetch" href="/assets/js/7.74721aa4.js"><link rel="prefetch" href="/assets/js/8.b442d010.js"><link rel="prefetch" href="/assets/js/11.a5e033c8.js"><link rel="prefetch" href="/assets/js/12.23c29f13.js"><link rel="prefetch" href="/assets/js/13.9649ca70.js"><link rel="prefetch" href="/assets/js/14.ca3148ba.js"><link rel="prefetch" href="/assets/js/15.7c4a717d.js"><link rel="prefetch" href="/assets/js/16.1cf87b10.js"><link rel="prefetch" href="/assets/js/17.75cf37c2.js"><link rel="prefetch" href="/assets/js/18.2975a34f.js"><link rel="prefetch" href="/assets/js/19.1faf98fc.js"><link rel="prefetch" href="/assets/js/20.d21bf986.js"><link rel="prefetch" href="/assets/js/21.3323d44d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ea7cecec.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">8B知识库</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">8B知识库</a></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>coding-standards</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>linux</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/linux/linux-howtos.html" class="sidebar-link">Linux HowTos</a></li><li><a href="/linux/linux-iptables.html" class="active sidebar-link">Iptables 使用指南</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/linux-iptables.html#常用命令" class="sidebar-link">常用命令</a></li><li class="sidebar-sub-header"><a href="/linux/linux-iptables.html#常用配置" class="sidebar-link">常用配置</a></li></ul></li><li><a href="/linux/linux-lnmp-optimizing.html" class="sidebar-link">LNMP Server优化</a></li><li><a href="/linux/linux-security.html" class="sidebar-link">Linux 安全</a></li><li><a href="/linux/linux-ubuntu-howtos.html" class="sidebar-link">Ubuntu HowTos</a></li><li><a href="/linux/linux-ubuntu-remove-home-directory-encryption.html" class="sidebar-link">Ubuntu 去除加密的 Home 目录</a></li><li><a href="/linux/linux-ubuntu-security.html" class="sidebar-link">Ubuntu 安全配置</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>mysql</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>nginx</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>oop</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>redis</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>tools</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>web-tour</span> <span class="arrow right"></span></p> <!----></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="iptables-使用指南"><a href="#iptables-使用指南" aria-hidden="true" class="header-anchor">#</a> Iptables 使用指南</h1> <h2 id="常用命令"><a href="#常用命令" aria-hidden="true" class="header-anchor">#</a> 常用命令</h2> <ul><li><p>查看INPUT的规则，并显示行号</p> <div class="language-bash extra-class"><pre class="language-bash"><code>iptables -L INPUT --line-numbers
+</code></pre></div></li> <li><p>显示详细规则</p> <div class="language-bash extra-class"><pre class="language-bash"><code>iptables -L -nv
+</code></pre></div></li> <li><p>删除规则</p> <div class="language-bash extra-class"><pre class="language-bash"><code>iptables -D INPUT 4
+</code></pre></div></li> <li><p>禁止IP</p> <div class="language-bash extra-class"><pre class="language-bash"><code>iptables -I INPUT -s <span class="token punctuation">{</span>IP<span class="token punctuation">}</span> -j DROP
+</code></pre></div></li> <li><p>允许来自某个IP访问某个TCP端口</p> <div class="language-bash extra-class"><pre class="language-bash"><code>iptables -A INPUT -p TCP -s <span class="token punctuation">{</span>SOURCE_IP<span class="token punctuation">}</span> --dport <span class="token punctuation">{</span>DEST_PORT<span class="token punctuation">}</span> -j ACCEPT
+</code></pre></div></li></ul> <h2 id="常用配置"><a href="#常用配置" aria-hidden="true" class="header-anchor">#</a> 常用配置</h2> <div class="language-bash extra-class"><pre class="language-bash"><code>iptables -P INPUT ACCEPT
+iptables -F
+iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A INPUT -p TCP --dport 80 -j ACCEPT
+iptables -A INPUT -p TCP --dport 22 -j ACCEPT
+iptables -A INPUT -p icmp -j ACCEPT
+iptables -P INPUT DROP
+</code></pre></div></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/linux/linux-howtos.html" class="prev">
+          Linux HowTos
+        </a></span> <span class="next"><a href="/linux/linux-lnmp-optimizing.html">
+          LNMP Server优化
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/assets/js/9.ce270a18.js" defer></script><script src="/assets/js/app.4d603897.js" defer></script>
+  </body>
+</html>

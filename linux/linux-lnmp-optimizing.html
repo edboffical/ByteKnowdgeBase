@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>LNMP Server优化 | 8B知识库</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.ea7cecec.css" as="style"><link rel="preload" href="/assets/js/app.4d603897.js" as="script"><link rel="preload" href="/assets/js/10.fbb0508f.js" as="script"><link rel="prefetch" href="/assets/js/2.cda51ec0.js"><link rel="prefetch" href="/assets/js/3.814d7077.js"><link rel="prefetch" href="/assets/js/4.75a5cdd8.js"><link rel="prefetch" href="/assets/js/5.95cbb943.js"><link rel="prefetch" href="/assets/js/6.3d7b26ae.js"><link rel="prefetch" href="/assets/js/7.74721aa4.js"><link rel="prefetch" href="/assets/js/8.b442d010.js"><link rel="prefetch" href="/assets/js/9.ce270a18.js"><link rel="prefetch" href="/assets/js/11.a5e033c8.js"><link rel="prefetch" href="/assets/js/12.23c29f13.js"><link rel="prefetch" href="/assets/js/13.9649ca70.js"><link rel="prefetch" href="/assets/js/14.ca3148ba.js"><link rel="prefetch" href="/assets/js/15.7c4a717d.js"><link rel="prefetch" href="/assets/js/16.1cf87b10.js"><link rel="prefetch" href="/assets/js/17.75cf37c2.js"><link rel="prefetch" href="/assets/js/18.2975a34f.js"><link rel="prefetch" href="/assets/js/19.1faf98fc.js"><link rel="prefetch" href="/assets/js/20.d21bf986.js"><link rel="prefetch" href="/assets/js/21.3323d44d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ea7cecec.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">8B知识库</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">8B知识库</a></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>coding-standards</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>linux</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/linux/linux-howtos.html" class="sidebar-link">Linux HowTos</a></li><li><a href="/linux/linux-iptables.html" class="sidebar-link">Iptables 使用指南</a></li><li><a href="/linux/linux-lnmp-optimizing.html" class="active sidebar-link">LNMP Server优化</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/linux-lnmp-optimizing.html#fpm的优化" class="sidebar-link">FPM的优化</a></li><li class="sidebar-sub-header"><a href="/linux/linux-lnmp-optimizing.html#php-ini的优化" class="sidebar-link">php.ini的优化</a></li></ul></li><li><a href="/linux/linux-security.html" class="sidebar-link">Linux 安全</a></li><li><a href="/linux/linux-ubuntu-howtos.html" class="sidebar-link">Ubuntu HowTos</a></li><li><a href="/linux/linux-ubuntu-remove-home-directory-encryption.html" class="sidebar-link">Ubuntu 去除加密的 Home 目录</a></li><li><a href="/linux/linux-ubuntu-security.html" class="sidebar-link">Ubuntu 安全配置</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>mysql</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>nginx</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>oop</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>redis</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>tools</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>web-tour</span> <span class="arrow right"></span></p> <!----></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="lnmp-server优化"><a href="#lnmp-server优化" aria-hidden="true" class="header-anchor">#</a> LNMP Server优化</h1> <p>LNMP = Linux + Nginx + MySQL + PHP</p> <h1 id="nginx优化"><a href="#nginx优化" aria-hidden="true" class="header-anchor">#</a> Nginx优化</h1> <p>编辑<code>/etc/nginx/nginx.conf</code>，修改相应配置：</p> <div class="language- extra-class"><pre class="language-text"><code>worker_processes auto;
+events {
+    worker_connections 10240;
+}
+server_tokens off;
+client_max_body_size 1024M;
+</code></pre></div><h1 id="mysql优化"><a href="#mysql优化" aria-hidden="true" class="header-anchor">#</a> MySQL优化</h1> <p>本文只涉及最基础的优化，深入的优化请参考<a href>MySQL优化指南</a>，通常情况下基础的优化，已可满足中小型应用的需求了。请在应用程序安装前，优化配置。</p> <p>MySQL的默认配置在<code>/etc/mysql/my.cnf</code>，修改如下配置：</p> <div class="language- extra-class"><pre class="language-text"><code>max_connections = N    # 该值的设置，参考下述的说明
+log_slow_queries        = /var/log/mysql/mysql-slow.log
+long_query_time = 2
+innodb_buffer_pool_size = 512M  # 该值的设置，参考下述的说明
+innodb_file_per_table = 1
+</code></pre></div><p><code>max_connections</code>数据库的最大连接数。通常一个PHP请求占用1个连接数的话，那么一个拥有最大N个FPM进程的服务器的话，<code>max_connections</code>可设置为<code>N+1</code>。
+当<code>N&lt;=100</code>时，可不设置该值。因为<code>max_connections</code>的默认值为100。</p> <p><code>innodb_buffer_pool_size</code> Innodb引擎的Buffer池的大小。该值直接影响基于innodb引擎的数据库查询效率。根据数据库的存储数据大小的容量来估算此值，默认为128M。如果是MySQL专用服务器，可以设置此值为物理内存的80%。如果非MySQL专用服务器，请合理分配该值的大小。</p> <h1 id="php优化"><a href="#php优化" aria-hidden="true" class="header-anchor">#</a> PHP优化</h1> <h2 id="fpm的优化"><a href="#fpm的优化" aria-hidden="true" class="header-anchor">#</a> FPM的优化</h2> <p>默认的fpm配置文件为：<code>/etc/php5/fpm/pool.d</code>。</p> <p>PHP-FPM主要优化FPM的最大进程数(pm.max_children)。如果服务器为Web 专用服务器，那么可以留有系统运行的内存后，其余都可分配给FPM。非专用服务器，请合理分配各个服务的内存。</p> <p>Symfony2的应用，一般一个FPM进程占用40M，以此为计算标准的话，如下：</p> <table><thead><tr><th>内存大小</th> <th>留给系统运行的内存</th> <th>可分配给FPM的内存</th> <th>pm.max_children</th></tr></thead> <tbody><tr><td>1G</td> <td>0.8G</td> <td>0.2G</td> <td>5</td></tr> <tr><td>2G</td> <td>1.0G</td> <td>1.0G</td> <td>20</td></tr> <tr><td>4G</td> <td>1.0G</td> <td>3.0G</td> <td>60</td></tr> <tr><td>8G</td> <td>1.5G</td> <td>6.5G</td> <td>160</td></tr> <tr><td>16G</td> <td>2.0G</td> <td>14.0G</td> <td>350</td></tr></tbody></table> <p>如果为FPM专用服务器，那么：</p> <div class="language- extra-class"><pre class="language-text"><code>pm = static
+pm.max_children = N            # N的值参照如上表格的计算方式
+pm.max_requests = 5000
+request_terminate_timeout = 300
+</code></pre></div><p>否则：</p> <div class="language- extra-class"><pre class="language-text"><code>pm = dynamic
+pm.max_children = N            # N的值参照如上表格的计算方式
+pm.start_servers = N * 0.4     # 请直接填写计算后的值
+pm.min_spare_servers = N * 0.1 # 请直接填写计算后的值
+pm.max_spare_servers = N * 0.5 # 请直接填写计算后的值
+pm.max_requests = 5000
+request_terminate_timeout = 300
+</code></pre></div><h2 id="php-ini的优化"><a href="#php-ini的优化" aria-hidden="true" class="header-anchor">#</a> php.ini的优化</h2> <p>默认php.ini配置文件在<code>/etc/php5/fpm/php.ini</code>，修改如下配置：</p> <div class="language- extra-class"><pre class="language-text"><code>expose_php = Off
+session.gc_probability = 1
+session.gc_divisor = 1000
+session.gc_maxlifetime = 1440
+post_max_size = 5M
+max_execution_time = 300
+max_input_time = 300
+memory_limit = 128M
+</code></pre></div></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/linux/linux-iptables.html" class="prev">
+          Iptables 使用指南
+        </a></span> <span class="next"><a href="/linux/linux-security.html">
+          Linux 安全
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/assets/js/10.fbb0508f.js" defer></script><script src="/assets/js/app.4d603897.js" defer></script>
+  </body>
+</html>
